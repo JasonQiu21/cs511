@@ -25,6 +25,7 @@ public class Customer implements Runnable {
         doneSignal = l;
         this.bakery = bakery;
         shoppingCart = new ArrayList<BreadType>();
+        fillShoppingCart();
     }
 
     /**
@@ -32,7 +33,6 @@ public class Customer implements Runnable {
      */
     public void run() {
         System.out.println(hashCode() + ": Begin shopping");
-        fillShoppingCart();
         for(BreadType i: shoppingCart){
             try{
                 bakery.shelves.get(i).acquire();
