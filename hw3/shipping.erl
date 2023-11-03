@@ -2,6 +2,9 @@
 -compile(export_all).
 -include_lib("./shipping.hrl").
 
+% Jason Qiu
+% I pledge my honor that I have abided by the Stevens Honor Society
+
 
 get_ship_helper(Ships, Ship_ID) ->
     case Ships of
