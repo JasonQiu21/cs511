@@ -42,3 +42,7 @@ deps
 .rebar3
 _build/
 _checkouts/
+
+pan
+pan.*
+*.trail
