@@ -39,7 +39,7 @@ listen(State) ->
             {Response, NextState} = loop(State, Request, Ref),
 	    case Response of
 		{dummy_target, Resp} ->
-		    io:format("Use this for whatever you would like~n"),
+		    % io:format("Use this for whatever you would like~n"),
 		    From!{result, self(), Ref, {dummy_target, Resp}},
 		    listen(NextState);
 		%% if shutdown is received, terminate

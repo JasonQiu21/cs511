@@ -63,7 +63,6 @@ do_update_nick(State, ClientPID, NewNick) ->
 
 propogate_message(State, Ref, ClientPID, Message, Pid) ->
     {ok, ClientNick} = maps:find(ClientPID, State#chat_st.registrations),
-    io:format(ClientNick),
     if
         ClientPID == Pid ->
             done;
